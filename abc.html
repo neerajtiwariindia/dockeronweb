@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<body background="img.jpg"
+	background-repeat: no-repeat;
+	background-size: auto;</body>
+<title>Docker On Browser</title>
+<h1>put your docker command and linux command below</h1>
+	<center>
+<script>
+
+function neeru()
+{
+ var i = document.getElementById("in1").value
+ var xhr = new XMLHttpRequest();
+
+ xhr.open("GET","http://192.168.43.140/cgi-bin/ab.py?x="+i,true);
+ 
+ xhr.send();
+ xhr.onload = function()
+	{
+		var output = xhr.responseText;
+		document.getElementById("d1").innerHTML=output;
+
+	}
+
+}
+
+</script>
+
+
+[root@localhost~] : <input  id = "in1"   />
+<pre>
+<div id = "d1" font-size:90px;>output </div>
+</pre>
+<button onclick="neeru()">CLICK</button>
+<style>
+	.d1
+	{
+		font-family:    Arial, Helvetica, sans-serif;
+		font-size:      80px;
+		font-weight:    bold;
+	}
+</style>
+</center>
+</html>
